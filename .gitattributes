@@ -1,4 +1,4 @@
 *.pbxproj -text
-*.java linguits-detectable=false
+*.java linguist-detectable=false
 *.ts linguist-detectable=true
 *.js linguist-detectable=false
