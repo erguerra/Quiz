@@ -2,3 +2,4 @@
 *.java linguist-detectable=false
 *.ts linguist-detectable=true
 *.js linguist-detectable=false
+*.rb linguist-detectable=false
