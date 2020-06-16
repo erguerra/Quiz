@@ -12,7 +12,9 @@ const Button = (props: IProps) => {
 
     return (
         <TouchableOpacity 
-        style={props.style? [styles.container, props.style] : styles.container}>
+        style={props.style? [styles.container, props.style] : styles.container}
+        onPress={props.onPress}
+        disabled={props.disabled}>
             <Text style={styles.text}>
                 {props.text}
             </Text>
