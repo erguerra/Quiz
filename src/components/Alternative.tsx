@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, LayoutAnimation } from 'react-native'
 import Button from './Button';
 
 
@@ -14,6 +14,7 @@ const Alternative = (props: IProps) => {
 
     const [isSelected, setIsSelected] = useState<boolean>(false);
 
+
     const getStyle = () => {
 
         if(props.disabled && props.rightAnswer){
@@ -27,6 +28,18 @@ const Alternative = (props: IProps) => {
         return styles.button;
     }
 
+    const getTextStyle = () => {
+        if(props.disabled && props.rightAnswer){
+            return styles.text;
+        }
+
+        if(isSelected && !props.rightAnswer){
+            return styles.text;
+        }
+        
+        return null;
+    }
+
     const selectAnswer = () => {
         setIsSelected(true);
         if(props.onSelect){
@@ -36,11 +49,12 @@ const Alternative = (props: IProps) => {
 
     return <View style={{flexDirection: 'row'}}>
             <Button 
-        text={props.text}
-        style={getStyle()}
-        disabled={props.disabled}
-        onPress={selectAnswer}
-    />
+                text={props.text}
+                style={getStyle()}
+                textStyle={getTextStyle()}
+                disabled={props.disabled}
+                onPress={selectAnswer}
+            />
         </View>
 
 }
@@ -64,4 +78,8 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         backgroundColor: "#FFFFFF",
     },
+
+    text: {
+        color: '#006960'
+    }
 }); 

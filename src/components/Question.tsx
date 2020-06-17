@@ -28,9 +28,9 @@ const Question = (props: IProps) => {
                     <Spacer size={16}/>
                     <Alternative 
                         text={alternative.text}
-                    disabled={disabled}
-                    onSelect={disableQuestion}
-                    rightAnswer={alternative.rightAnswer}/>
+                        disabled={disabled}
+                        onSelect={disableQuestion}
+                        rightAnswer={alternative.rightAnswer}/>
                 </View>
                 
         })}

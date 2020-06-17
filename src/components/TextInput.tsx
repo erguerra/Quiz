@@ -11,7 +11,7 @@ const TextInput = (props: IProps) => {
     return <RNTextInput 
     value={props.value}
     onChangeText={props.onChangeText}
-    underlineColorAndroid={"black"}
+    underlineColorAndroid={"#006960"}
     style={styles.input}/>
 }
 

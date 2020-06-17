@@ -3,12 +3,12 @@ import { StyleSheet, Text } from 'react-native'
 
 interface IProps {
     color?: string
-    disabled?: boolean
     children: ReactChild
+    style?: any
 }
 
 const H1 = (props: IProps) => {
-    return <Text style={styles.title}>{props.children}</Text>;
+    return <Text style={[styles.title, props.style]}>{props.children}</Text>;
 }
 
 export default H1;
